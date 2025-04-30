@@ -11,27 +11,35 @@
 <body>
     <div id="map"></div>
     <!-- Firebase SDKs -->
-<script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
-
-<script>
-  // Configuração do Firebase
-  const firebaseConfig = {
-    apiKey: "AIzaSyCI4yXVydWDbZqf8F0iLZm2tJ3yVfc9g7Y",
-    authDomain: "extensao-software-uno.firebaseapp.com",
-    projectId: "extensao-software-uno",
-    storageBucket: "extensao-software-uno.firebasestorage.app",
-    messagingSenderId: "995073531563",
-    appId: "1:995073531563:web:7ea6ae6e04607e833721ee",
-    measurementId: "G-MPLXZL9623"
-  };
-
-  // Inicializa Firebase e Firestore
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
-</script>
-
+    <!-- <script src="script.js"></script> -->
+    <script type="module">
+        // Importar as funções necessárias do Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";  // CORREÇÃO: Importar addDoc aqui
+      
+        // Sua configuração do Firebase
+        const firebaseConfig = {
+          apiKey: "AIzaSyCI4yXVydWDbZqf8F0iLZm2tJ3yVfc9g7Y",
+          authDomain: "extensao-software-uno.firebaseapp.com",
+          projectId: "extensao-software-uno",
+          storageBucket: "extensao-software-uno.firebasestorage.app",
+          messagingSenderId: "995073531563",
+          appId: "1:995073531563:web:7ea6ae6e04607e833721ee",
+          measurementId: "G-MPLXZL9623"
+        };
+      
+        // Inicializando o Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      
+        // Inicializar o Firestore
+        const db = getFirestore(app);
+      
+        // Disponibiliza a variável db para o script.js
+        window.db = db;
+      </script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
