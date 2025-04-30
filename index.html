@@ -10,6 +10,27 @@
 </head>
 <body>
     <div id="map"></div>
+    <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+
+<script>
+  // Configuração do Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCI4yXVydWDbZqf8F0iLZm2tJ3yVfc9g7Y",
+    authDomain: "extensao-software-uno.firebaseapp.com",
+    projectId: "extensao-software-uno",
+    storageBucket: "extensao-software-uno.firebasestorage.app",
+    messagingSenderId: "995073531563",
+    appId: "1:995073531563:web:7ea6ae6e04607e833721ee",
+    measurementId: "G-MPLXZL9623"
+  };
+
+  // Inicializa Firebase e Firestore
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>

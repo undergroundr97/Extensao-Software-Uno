@@ -4,7 +4,17 @@
 }
 
 #map{
-    height:100vh;
-    width: 100%;
+    height:600px;
+    width: 75%;
+    border-radius: 20%;
 }
 
+#formContainer {
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+}
+
+#formContainer select {
+    width: 100%;
+}
