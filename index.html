@@ -9,16 +9,27 @@
 
 </head>
 <body>
-    <div id="map"></div>
-    <!-- Firebase SDKs -->
-    <!-- <script src="script.js"></script> -->
+    <header>
+        <h1>🌍 Mapa de Problemas Urbanos</h1>
+        <p>Visualize e registre ocorrências em sua cidade</p>
+      </header>
+    
+      <main>
+        <div id="map"></div>
+      </main>
+    
+      <footer>
+        <p>Projeto de Extensão • UNO • 2025</p>
+      </footer>
+   
+
     <script type="module">
-        // Importar as funções necessárias do Firebase SDK
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
         import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";  // CORREÇÃO: Importar addDoc aqui
       
         // Sua configuração do Firebase
+        // db.key = File.read('')
         const firebaseConfig = {
           apiKey: "AIzaSyCI4yXVydWDbZqf8F0iLZm2tJ3yVfc9g7Y",
           authDomain: "extensao-software-uno.firebaseapp.com",
